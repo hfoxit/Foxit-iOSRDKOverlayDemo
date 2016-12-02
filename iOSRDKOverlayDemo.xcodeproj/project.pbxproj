@@ -13,7 +13,25 @@
 		AD60A7C01DF0B63D00D122A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD60A7BE1DF0B63D00D122A5 /* Main.storyboard */; };
 		AD60A7C21DF0B63D00D122A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD60A7C11DF0B63D00D122A5 /* Assets.xcassets */; };
 		AD60A7C51DF0B63D00D122A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD60A7C31DF0B63D00D122A5 /* LaunchScreen.storyboard */; };
+		AD60A7CF1DF0BA7E00D122A5 /* FoxitRDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD60A7CE1DF0BA7E00D122A5 /* FoxitRDK.framework */; };
+		AD60A7D11DF0BABA00D122A5 /* FoxitText.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AD60A7D01DF0BABA00D122A5 /* FoxitText.pdf */; };
+		AD60A7D61DF0D62400D122A5 /* FoxitRDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD60A7CE1DF0BA7E00D122A5 /* FoxitRDK.framework */; };
+		AD60A7D71DF0D62400D122A5 /* FoxitRDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD60A7CE1DF0BA7E00D122A5 /* FoxitRDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD60A7D81DF0D62500D122A5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AD60A7D71DF0D62400D122A5 /* FoxitRDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AD60A7B21DF0B63D00D122A5 /* iOSRDKOverlayDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSRDKOverlayDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +44,8 @@
 		AD60A7C11DF0B63D00D122A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD60A7C41DF0B63D00D122A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD60A7C61DF0B63D00D122A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD60A7CE1DF0BA7E00D122A5 /* FoxitRDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FoxitRDK.framework; sourceTree = "<group>"; };
+		AD60A7D01DF0BABA00D122A5 /* FoxitText.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FoxitText.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD60A7D61DF0D62400D122A5 /* FoxitRDK.framework in Frameworks */,
+				AD60A7CF1DF0BA7E00D122A5 /* FoxitRDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +64,8 @@
 		AD60A7A91DF0B63D00D122A5 = {
 			isa = PBXGroup;
 			children = (
+				AD60A7D01DF0BABA00D122A5 /* FoxitText.pdf */,
+				AD60A7CE1DF0BA7E00D122A5 /* FoxitRDK.framework */,
 				AD60A7B41DF0B63D00D122A5 /* iOSRDKOverlayDemo */,
 				AD60A7B31DF0B63D00D122A5 /* Products */,
 			);
@@ -89,6 +113,7 @@
 				AD60A7AE1DF0B63D00D122A5 /* Sources */,
 				AD60A7AF1DF0B63D00D122A5 /* Frameworks */,
 				AD60A7B01DF0B63D00D122A5 /* Resources */,
+				AD60A7D81DF0D62500D122A5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD60A7D11DF0BABA00D122A5 /* FoxitText.pdf in Resources */,
 				AD60A7C51DF0B63D00D122A5 /* LaunchScreen.storyboard in Resources */,
 				AD60A7C21DF0B63D00D122A5 /* Assets.xcassets in Resources */,
 				AD60A7C01DF0B63D00D122A5 /* Main.storyboard in Resources */,
@@ -265,8 +291,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iOSRDKOverlayDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Foxit.iOSRDKOverlayDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -276,8 +310,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iOSRDKOverlayDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Foxit.iOSRDKOverlayDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

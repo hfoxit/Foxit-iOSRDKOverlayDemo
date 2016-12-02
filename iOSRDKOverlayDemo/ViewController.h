@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<IDrawEventListener>
 
+- (void)onDraw:(int)pageIndex inContext:(CGContextRef)context;
+
+@property(nonatomic, retain) FSPDFViewCtrl* testViewCtrl;
 
 @end
 
